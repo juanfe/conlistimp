@@ -1,0 +1,14 @@
+{
+  "name": "Contact List importer",
+  "description": "Import list of contacts from CSV, and Android.",
+  "version": "1.0",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon.png"
+  },
+  "developer": {
+    "name": "Juan Fernando Jaramillo Botero",
+    "url": "http://www.opdevel.org"
+  },
+  "default_locale": "en"
+}
