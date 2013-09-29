@@ -17,6 +17,7 @@ function listContents(storagename) {
         }
         else {
             this.done = true;
+            alert("File is null!");
         }
 
         if (!this.done) {
