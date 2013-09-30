@@ -1,4 +1,4 @@
-function listContents(storagename) {
+function listContents(dir, storagename) {
     //Clear up the list first
     $('#results').html("");
     var files = navigator.getDeviceStorage(storagename);
@@ -17,7 +17,7 @@ function listContents(storagename) {
         }
         else {
             this.done = true;
-            alert("File is null!");
+            //alert("File is null!");
         }
 
         if (!this.done) {
@@ -28,15 +28,15 @@ function listContents(storagename) {
 
 $(document).ready(function(){
     $("#browseSDCard").click(function(){
-        listContents('sdcard');
+        listContents('', 'sdcard');
     });
     $("#browseVideos").click(function(){
-        listContents('videos');
+        listContents('', 'videos');
     });
     $("#browseMusic").click(function(){
-        listContents('music');
+        listContents('', 'music');
     });
     $("#browsePictures").click(function(){
-        listContents('pictures');
+        listContents('', 'pictures');
     });
 });

@@ -1,3 +1,3 @@
 $(function() {
-  $("div").text("Hello World!");
+  listContents('', 'sdcard');
 });
