@@ -10,6 +10,6 @@
     "name": "Juan Fernando Jaramillo Botero",
     "url": "http://www.opdevel.org"
   },
-  "default_locale": "en",
-  "device-storage": "sdcard"
+  "device-storage:sdcard":{ "access": "readonly" },
+	"default_locale": "en"
 }
