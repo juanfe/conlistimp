@@ -1,3 +1,8 @@
+function isInSubDirectory(dir, file) {
+    var fl = file.replace(RegExp('^'+dir+'/'), '');
+    return fl.indexOf('/') != -1;
+}
+
 function listContents(dir, storagename) {
     //Clear up the list first
     $('#results').html("");
@@ -9,10 +14,18 @@ function listContents(dir, storagename) {
         //alert("Got something");
         var file = this.result;
         if (file != null) {
-            var imageElement = $('<img height="100" width="75">');
-            imageElement.attr('src', window.URL.createObjectURL(file));
-            $("<p>" + file.name + "," + file.lastModifiedDate + "," + file.type + "," + file.size  + "</p>").appendTo('#results');
-            imageElement.appendTo("#results");
+            if (isInSubDirectory(dir, file.name)){
+                // Aquí hay que imprimir el directorio, pero sin los archivos
+                // Sería bueno meterlos en un arreglo, y si el directorio está
+                // en el directorio, no mostrarlo
+                alert('hola');
+            }
+            else {
+                var imageElement = $('<img height="100" width="75">');
+                imageElement.attr('src', window.URL.createObjectURL(file));
+                $("<p>" + file.name + "," + file.lastModifiedDate + "," + file.type + "," + file.size  + "</p>").appendTo('#results');
+                imageElement.appendTo("#results");
+            }
             this.done = false;
         }
         else {
