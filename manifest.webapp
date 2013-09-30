@@ -8,8 +8,10 @@
   },
   "developer": {
     "name": "Juan Fernando Jaramillo Botero",
+    "url": "http://www.opdevel.org",
+    "name": "Gloria Patricia Meneses Portilla",
     "url": "http://www.opdevel.org"
   },
   "device-storage:sdcard":{ "access": "readonly" },
-	"default_locale": "en"
+  "default_locale": "en"
 }
